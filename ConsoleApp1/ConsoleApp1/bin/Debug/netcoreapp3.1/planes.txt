@@ -1,0 +1,3 @@
+Model: с2, Max Range: 500, Cruise Speed: 220
+Model: с1, Max Range: 400, Cruise Speed: 120
+Model: с3, Max Range: 100, Cruise Speed: 90
