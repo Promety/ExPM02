@@ -1,3 +1,3 @@
-Model: суваы, Max Range: 324, Cruise Speed: 34
-Model: авп, Max Range: 54, Cruise Speed: 234
-Model: авыаыва, Max Range: 23, Cruise Speed: 3
+Model: Самолет 2, Max Range: 4500, Cruise Speed: 1400
+Model: самолет 3, Max Range: 3000, Cruise Speed: 1000
+Model: Самолет 1, Max Range: 1000, Cruise Speed: 1200
