@@ -59,7 +59,12 @@ namespace ConsoleApp1
             PlaneControl control = new PlaneControl();
 
             Console.Write("Введите кол-во самолетов (размер массива): ");
-            int size = int.Parse(Console.ReadLine());
+            int size ;
+            while (!int.TryParse(Console.ReadLine(), out size) || size <= 0)
+            {
+                Console.WriteLine("Неправильный ввод данных");
+                Console.Write("Введите кол-во самолетов (размер массива) ");
+            }
 
             for (int i = 0; i < size; i++)
             {
@@ -67,10 +72,21 @@ namespace ConsoleApp1
                 string model = Console.ReadLine();
 
                 Console.Write("Максимальная дальность полёта: ");
-                double maxRange = double.Parse(Console.ReadLine());
+                double maxRange;
+                while (!double.TryParse(Console.ReadLine(), out maxRange) || maxRange <= 0)
+                {
+                    Console.WriteLine("Неправильный ввод данных, попробуйте еще раз");
+                    Console.Write("Максимальная дальность полёта: ");
+                }
 
                 Console.Write("Крейсерская скорость: ");
-                double cruiseSpeed = double.Parse(Console.ReadLine());
+                double cruiseSpeed;
+                while (!double.TryParse(Console.ReadLine(), out cruiseSpeed) || cruiseSpeed <= 0)
+                {
+                    Console.WriteLine("Неправильный ввод данных, попробуйте еще раз");
+                    Console.Write("Крейсерская скорость: ");
+                }
+
 
                 Plane plane = new Plane(model, maxRange, cruiseSpeed);
                 control.AddPlane(plane);
